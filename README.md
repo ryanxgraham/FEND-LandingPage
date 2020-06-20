@@ -9,7 +9,7 @@
 
 ## Content
 
-This project has some HTML and CSS styling to display an interactive Landing Page.
+This project has some HTML and CSS styling to display an interactive Landing Page.  The logic for the dynamic content is built in JavaScript.
 
 ## Implementation
 
@@ -18,4 +18,4 @@ Active sections in view are highlighted when scrolling. A floating button to smo
 ## Contributions
 
 Starter code provided by Udacity, Functionality implemented by
-* **Ryan Graham** - [Github](https://github.com/ryanxgraham)
+* Ryan Graham - [Github](https://github.com/ryanxgraham)
