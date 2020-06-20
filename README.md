@@ -2,12 +2,20 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+* [Content](#instructions)
+* [Implementation](#implementation)
+* [Contributions](#contributions)
 
-## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Content
 
-To get started, open `js/app.js` and start building out the app's functionality
+This project has some HTML and CSS styling to display an interactive Landing Page.
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## Implementation
+
+Active sections in view are highlighted when scrolling. A floating button to smooth scroll to the top of the page becomes visible when below the Landing Page. The navigation bar is hidden when scrolling and reappears when the user stops scrolling. Scrolling is enabled to each section with offset compensation for the navigation bar.
+
+## Contributions
+
+Starter code provided by Udacity, Functionality implemented by
+* **Ryan Graham** - [Github](https://github.com/ryanxgraham)
