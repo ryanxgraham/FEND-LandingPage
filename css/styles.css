@@ -65,14 +65,14 @@ section {
 
 /* Navigation Styles*/
 .navbar__menu ul {
+    opacity: 1;
     padding-left: 0;
     margin: 0;
     text-align: left;
     background-color: rgba(0,13,60,1);
     box-shadow: 0rem .4rem 1rem 1rem rgba(0,13,60,1);
-    transition: all 0.3s linear;
+    transition: all 0.5s ease;
 }
-
 .navbar__menu li {
     display: inline-block;
 }
@@ -92,11 +92,10 @@ section {
 }
 
 .navbar__menu ul.hide {
-    display: none;
+    opacity: 0;
 }
 /* Header Styles */
 .page__header {
-    background: #fff;
     position: fixed;
     top: 0;
     width: 100%;
@@ -130,10 +129,16 @@ section {
   padding: 1em;
   border-radius: 20%;
   box-shadow: .1rem .1rem 1rem .2rem rgba(0,13,60,1);
+  transition: all 0.3s ease;
 }
 
 .bottom__link.hide {
-  display: none;
+  opacity: 0;
+}
+
+.bottom__link:hover {
+    background-color: rgba(33,59,85,1);
+    color: rgba(136,203,171,1);
 }
 
 /* ---- Theme Rules ---- */
@@ -160,7 +165,7 @@ section:nth-of-type(even) .landing__container {
 /* Note that background circles are created with psuedo elements before and after */
 /* Circles appear to be random do to use of :nth-of-type psuedo class */
 section:nth-of-type(odd) .landing__container::before {
-    content: '';
+    content: '';50
     background: rgba(255, 255, 255, 0.187);
     position: absolute;
     z-index: -5;

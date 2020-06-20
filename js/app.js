@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(
         window.addEventListener("scroll", function() {
             setSectionToActive(sections);
-            hideNav(1000);
+            hideNav(500);
             showToTop();
         }),
         2000
