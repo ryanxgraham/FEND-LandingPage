@@ -41,6 +41,15 @@ function topSectionInViewport(el) {
     );
 }
 
+//taken from https://muffinman.io/javascript-get-element-offset/
+function getElementOffset(el) {
+    const rect = el.getBoundingClientRect();
+    return {
+        top: rect.top + window.pageYOffset,
+        left: rect.left + window.pageXOffset
+    };
+}
+
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -48,13 +57,38 @@ function topSectionInViewport(el) {
 */
 
 // build the nav
-
+function buildNav(sections) {
+    for (const section of sections) {
+        let navLinkName = section.getAttribute("data-nav");
+        let sectionId = section.getAttribute("id");
+        insNavLink(navLinkName, sectionId);
+    }
+}
 
 // Add class 'active' to section when near top of viewport
-
+function setSectionToActive(sections) {
+    for (const section of sections) {
+        const activeLink = document.querySelector(
+            a[href="#${section.getAttribute("id")}"]
+        );
+        if (topSectionInViewport(section)) {
+            section.classList.add("active");
+            activeLink.classList.add("menu__link--active")
+        } else {
+            section.classList.remove("active");
+            activeLink.classList.remove("menu__link--active")
+        }
+    }
+}
 
 // Scroll to anchor ID using scrollTO event
-
+function scroll(el) {
+    window.scrollTO({
+        top: getElementOffset(el).top - nav.offsetHeight,
+        left: getElementOffset(el).left,
+        behavior: "smooth"
+    });
+}
 
 /**
  * End Main Functions
